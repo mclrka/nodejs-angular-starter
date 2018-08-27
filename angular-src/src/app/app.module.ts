@@ -50,7 +50,7 @@ const routes: Route[] = [
     UserPageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'angular-template' }),
     SharedModule,
     CoreModule,
     RouterModule.forRoot(routes, { enableTracing: false }),
