@@ -8,6 +8,7 @@ import db from './db';
 import auth from './auth';
 import socialAuth from './social-auth';
 import config from './config';
+import ngApp from './ng-app';
 
 // App class will encapsulate our web server.
 export class App {
@@ -24,6 +25,8 @@ export class App {
     db.init(() => {
       this.mountPreMiddlewares();
       this.mountRoutes();
+
+      if (!config.DEBUG_MODE) ngApp.init(this.express);
       this.mountPostMiddlewares();
 
       this.express.listen(port);
@@ -50,19 +53,6 @@ export class App {
 
   private mountRoutes(): void {
     this.express.use('/api', require('./api/routes'));
-
-    // We don't serve angular code on debug mode
-    if (config.DEBUG_MODE) {
-      return;
-    }
-
-    // Point static path to Angular 2 distribution
-    this.express.use(express.static(path.join(__dirname, 'dist')));
-
-    // Deliever the Angular 2 distribution
-    this.express.get('*', function(req, res) {
-      res.sendFile(path.join(__dirname, 'dist/index.html'));
-    });
   }
 }
 
