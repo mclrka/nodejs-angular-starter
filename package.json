@@ -9,8 +9,9 @@
         "start": "node out/src/index.js",
         "build:node": "rm -rf out && tsc -p .",
         "build:angular": "cd angular-src && ng build --aot --prod",
-        "build:server-client": "cd angular-src && ng build --aot --prod && ng run angular-src:server",
+        "build:ssr": "cd angular-src && ng build --aot --prod && ng run angular-src:server",
         "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+        "copy-config": "cp -Rf src/config out/src/config",
         "debug": "nodemon --ignore angular-src --exec ./node_modules/.bin/ts-node -- ./src/index.ts -debug",
         "test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts"
     },
@@ -47,9 +48,15 @@
         "typescript": "^2.7.2"
     },
     "dependencies": {
+        "@angular/animations": "^6.0.3",
+        "@angular/common": "^6.0.3",
+        "@angular/compiler": "^6.0.3",
         "@angular/core": "^6.0.3",
+        "@angular/forms": "^6.0.3",
+        "@angular/http": "^6.0.3",
         "@angular/platform-browser": "^6.0.3",
         "@angular/platform-browser-dynamic": "^6.0.3",
+        "@angular/router": "^6.0.3",
         "@angular/platform-server": "^6.1.4",
         "@nguniversal/module-map-ngfactory-loader": "^6.1.0",
         "bcrypt": "^2.0.1",
@@ -73,6 +80,8 @@
         "tedious": "^2.3.1",
         "typestyle": "^1.5.1",
         "uuid": "^3.1.0",
-        "zone.js": "^0.8.26"
+        "zone.js": "^0.8.26",
+        "rxjs": "^6.0.0",
+        "rxjs-compat": "^6.2.1"
     }
 }
