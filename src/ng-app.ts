@@ -27,12 +27,7 @@ export class AngularApp {
     const {
       AppServerModuleNgFactory,
       LAZY_MODULE_MAP
-    } = require('./dist/server/main');
-
-    // Our index.html we'll use as our template
-    const template = readFileSync(
-      join(DIST_FOLDER, 'browser', 'index.html')
-    ).toString();
+    } = require(join(DIST_FOLDER, 'server', 'main'));
 
     app.engine(
       'html',
