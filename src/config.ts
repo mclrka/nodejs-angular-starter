@@ -3,7 +3,6 @@
  *  environment specified in the NODE_ENV environment variable.
  */
 
-import { Document, Model, PaginateModel } from 'mongoose';
 import { AppConfig } from './models';
 import * as cors from 'cors';
 

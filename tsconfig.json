@@ -9,6 +9,7 @@
     "strict": false
   },
   "exclude": [
+    "out",
     "angular-src",
     "src/tests",
     "node_modules"

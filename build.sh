@@ -20,6 +20,9 @@ echo "Building Angular app for distribution..."
 echo "Building Angular app for server side rendering..."
 ./node_modules/.bin/ng run angular-src:server
 
+echo "Running webpack for server side rendering..."
+./node_modules/.bin/webpack --config webpack.server.config.js --progress --colors
+
 echo "Copying angular dist into out directory..."
 mkdir ../out/src/dist
 cp -Rf dist ../out/src
