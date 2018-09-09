@@ -46,7 +46,7 @@
         "nodemon": "^1.12.1",
         "request": "^2.83.0",
         "ts-node": "^3.3.0",
-        "typescript": "^2.7.2"
+        "typescript": "^2.9.2"
     },
     "dependencies": {
         "@angular/animations": "^6.0.3",
@@ -57,8 +57,8 @@
         "@angular/http": "^6.0.3",
         "@angular/platform-browser": "^6.0.3",
         "@angular/platform-browser-dynamic": "^6.0.3",
-        "@angular/router": "^6.0.3",
         "@angular/platform-server": "^6.1.4",
+        "@angular/router": "^6.0.3",
         "@nguniversal/module-map-ngfactory-loader": "^6.1.0",
         "bcrypt": "^2.0.1",
         "body-parser": "^1.18.2",
@@ -70,7 +70,7 @@
         "express-session": "^1.15.6",
         "http-errors": "^1.6.3",
         "jsonwebtoken": "^8.3.0",
-        "mongoose": "^5.0.12",
+        "mongoose": "^5.2.13",
         "morgan": "^1.9.0",
         "passport": "^0.4.0",
         "passport-facebook-token": "^3.3.0",
@@ -78,11 +78,15 @@
         "passport-local": "^1.0.0",
         "randomstring": "^1.1.5",
         "reflect-metadata": "^0.1.12",
+        "rxjs": "^6.0.0",
+        "rxjs-compat": "^6.2.1",
         "tedious": "^2.3.1",
+        "ts-loader": "^5.0.0",
         "typestyle": "^1.5.1",
         "uuid": "^3.1.0",
-        "zone.js": "^0.8.26",
-        "rxjs": "^6.0.0",
-        "rxjs-compat": "^6.2.1"
+        "webpack": "^4.17.2",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.8",
+        "zone.js": "^0.8.26"
     }
 }
