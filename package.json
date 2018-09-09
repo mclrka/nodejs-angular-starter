@@ -59,6 +59,7 @@
         "@angular/platform-browser-dynamic": "^6.0.3",
         "@angular/platform-server": "^6.1.4",
         "@angular/router": "^6.0.3",
+        "@nguniversal/express-engine": "^6.1.0",
         "@nguniversal/module-map-ngfactory-loader": "^6.1.0",
         "bcrypt": "^2.0.1",
         "body-parser": "^1.18.2",
