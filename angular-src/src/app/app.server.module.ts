@@ -7,11 +7,9 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
-    // The AppServerModule nshould import your AppModule followed
-    // by the ServerModule from @angular/platform-server.
     AppModule,
     ServerModule,
-    ModuleMapLoaderModule // <-- *Important* to have lazy-loaded routes work
+    ModuleMapLoaderModule
   ],
   // Since the bootstrapped component is not inherited from your
   // imported AppModule, it needs to be repeated here.

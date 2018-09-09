@@ -10,6 +10,7 @@
         "build:node": "rm -rf out && tsc -p .",
         "build:angular": "cd angular-src && ng build --aot --prod",
         "build:ssr": "cd angular-src && ng build --aot --prod && ng run angular-src:server",
+        "serve:ssr": "node dist/server",
         "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
         "copy-config": "cp -Rf src/config out/src/config",
         "debug": "nodemon --ignore angular-src --exec ./node_modules/.bin/ts-node -- ./src/index.ts -debug",
