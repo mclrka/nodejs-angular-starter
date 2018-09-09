@@ -21,12 +21,12 @@ export class AngularApp {
   init(app: Application) {
     enableProdMode();
 
-    const DIST_FOLDER = join(process.cwd(), "../angular-src/dist");
+    const DIST_FOLDER = join(process.cwd(), "dist");
 
     const {
       AppServerModuleNgFactory,
       LAZY_MODULE_MAP
-    } = require("../angular-src/dist/server/main");
+    } = require("./dist/server/main");
 
     // Our index.html we'll use as our template
     const template = readFileSync(
