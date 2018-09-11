@@ -62,15 +62,11 @@
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json",
-            "bundleDependencies": "all"
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }]
-            }
+            "bundleDependencies": "all",
+            "fileReplacements": [{
+              "replace": "src/environments/environment.ts",
+              "with": "src/environments/environment.prod.ts"
+            }]
           }
         },
         "serve": {
