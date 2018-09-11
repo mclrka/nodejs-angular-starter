@@ -26,7 +26,7 @@ export class AngularApp {
     const {
       AppServerModuleNgFactory,
       LAZY_MODULE_MAP
-    } = require(join(DIST_FOLDER, 'server', 'index'));
+    } = require(join(DIST_FOLDER, 'server', 'main'));
 
     app.engine(
       'html',
